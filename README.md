@@ -1,1 +1,1 @@
-An ecommerce website made using laravel 8 and voyager
+A simple ecommerce website made using laravel 8 and voyager
