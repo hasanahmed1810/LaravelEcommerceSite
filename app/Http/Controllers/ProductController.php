@@ -15,7 +15,7 @@ class ProductController extends Controller
     //
     function index()
     {
-        $data = Product::all();
+        $data = Product::paginate(8);
 
         return view('product', ['products' => $data]);
     }
@@ -27,7 +27,7 @@ class ProductController extends Controller
     function search(Request $req)
     {
         $data = Product::where('name', 'like', '%' . $req->input('query') . '%')
-            ->get();
+            ->paginate(7);
         return view('search', ['products' => $data]);
     }
     function addToCart(Request $req)

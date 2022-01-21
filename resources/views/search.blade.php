@@ -21,6 +21,7 @@
             <hr style="border-color: lightgray">
             </div>
             @endforeach
+            {{$products->links()}}
           </div>
      </div>
 </div>
